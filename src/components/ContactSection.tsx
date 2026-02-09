@@ -51,13 +51,24 @@ const ContactSection = () => {
           </div>
 
           {/* Embedded Form */}
-          <div className="bg-card rounded-lg shadow-2xl overflow-hidden">
-            <iframe src="https://api.leadconnectorhq.com/widget/form/dFdc5zQHeJQU0mNyUeTO" style={{
-            width: "100%",
-            height: "765px",
-            border: "none",
-            borderRadius: "3px"
-          }} id="contact-inline-dFdc5zQHeJQU0mNyUeTO" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="lovable embed" data-height="765" data-layout-iframe-id="contact-inline-dFdc5zQHeJQU0mNyUeTO" data-form-id="dFdc5zQHeJQU0mNyUeTO" title="lovable embed" loading="lazy" />
+          <div className="bg-card rounded-lg shadow-2xl overflow-hidden min-h-[744px]">
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/form/dFdc5zQHeJQU0mNyUeTO"
+              style={{ display: "none", width: "100%", height: "100%", border: "none", borderRadius: "3px" }}
+              id="inline-dFdc5zQHeJQU0mNyUeTO"
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="showOnScrolling"
+              data-trigger-value="50"
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="lovable embed"
+              data-height="744"
+              data-layout-iframe-id="inline-dFdc5zQHeJQU0mNyUeTO"
+              data-form-id="dFdc5zQHeJQU0mNyUeTO"
+              title="lovable embed"
+            />
           </div>
         </div>
       </div>
