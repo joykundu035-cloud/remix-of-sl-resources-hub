@@ -1,4 +1,5 @@
 import heroTruck from "@/assets/hero-truck.jpg";
+import HeroLeadForm from "@/components/HeroLeadForm";
 
 const HeroSection = () => {
   return (
@@ -18,26 +19,7 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Form card */}
           <div className="order-2 lg:order-1">
-            <div className="bg-card rounded-lg shadow-2xl overflow-hidden max-w-[420px]">
-              <iframe
-                src="https://api.leadconnectorhq.com/widget/form/dFdc5zQHeJQU0mNyUeTO"
-                style={{ width: "100%", height: "765px", border: "none", borderRadius: "3px" }}
-                id="inline-dFdc5zQHeJQU0mNyUeTO"
-                data-layout="{'id':'INLINE'}"
-                data-trigger-type="alwaysShow"
-                data-trigger-value=""
-                data-activation-type="alwaysActivated"
-                data-activation-value=""
-                data-deactivation-type="neverDeactivate"
-                data-deactivation-value=""
-                data-form-name="lovable embed"
-                data-height="765"
-                data-layout-iframe-id="inline-dFdc5zQHeJQU0mNyUeTO"
-                data-form-id="dFdc5zQHeJQU0mNyUeTO"
-                title="lovable embed"
-                loading="lazy"
-              />
-            </div>
+            <HeroLeadForm />
           </div>
 
           {/* Hero text */}
