@@ -1,8 +1,6 @@
 import { MapPin, Phone, Mail } from "lucide-react";
-
 const ContactSection = () => {
-  return (
-    <section id="contact" className="section-padding bg-background">
+  return <section id="contact" className="section-padding bg-background">
       <div className="container-max">
         <div className="text-center mb-12 reveal">
           <span className="text-primary font-heading font-bold text-sm uppercase tracking-widest">Get In Touch</span>
@@ -39,51 +37,30 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-heading font-bold text-foreground text-sm">Email</h4>
-                  <p className="text-muted-foreground text-sm">info@slresources.com</p>
+                  <p className="text-muted-foreground text-sm">wayne@slresources.info</p>
                 </div>
               </div>
             </div>
 
             {/* Map */}
             <div className="rounded-lg overflow-hidden shadow-md h-64">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d214587.60365714584!2d-96.87194384882812!3d32.82058419999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c19f77b45974b%3A0xb9ec9ba4f647571f!2sDallas%2C%20TX!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="SL Resources location"
-              />
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d214587.60365714584!2d-96.87194384882812!3d32.82058419999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c19f77b45974b%3A0xb9ec9ba4f647571f!2sDallas%2C%20TX!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="100%" style={{
+              border: 0
+            }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="SL Resources location" />
             </div>
           </div>
 
           {/* Embedded Form */}
           <div className="bg-card rounded-lg shadow-2xl overflow-hidden">
-            <iframe
-              src="https://api.leadconnectorhq.com/widget/form/dFdc5zQHeJQU0mNyUeTO"
-              style={{ width: "100%", height: "765px", border: "none", borderRadius: "3px" }}
-              id="contact-inline-dFdc5zQHeJQU0mNyUeTO"
-              data-layout="{'id':'INLINE'}"
-              data-trigger-type="alwaysShow"
-              data-trigger-value=""
-              data-activation-type="alwaysActivated"
-              data-activation-value=""
-              data-deactivation-type="neverDeactivate"
-              data-deactivation-value=""
-              data-form-name="lovable embed"
-              data-height="765"
-              data-layout-iframe-id="contact-inline-dFdc5zQHeJQU0mNyUeTO"
-              data-form-id="dFdc5zQHeJQU0mNyUeTO"
-              title="lovable embed"
-              loading="lazy"
-            />
+            <iframe src="https://api.leadconnectorhq.com/widget/form/dFdc5zQHeJQU0mNyUeTO" style={{
+            width: "100%",
+            height: "765px",
+            border: "none",
+            borderRadius: "3px"
+          }} id="contact-inline-dFdc5zQHeJQU0mNyUeTO" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="lovable embed" data-height="765" data-layout-iframe-id="contact-inline-dFdc5zQHeJQU0mNyUeTO" data-form-id="dFdc5zQHeJQU0mNyUeTO" title="lovable embed" loading="lazy" />
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;
