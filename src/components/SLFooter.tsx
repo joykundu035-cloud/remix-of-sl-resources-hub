@@ -58,9 +58,9 @@ const SLFooter = () => {
 
         <div className="border-t border-border mt-8 pt-6 text-center">
           <p className="text-muted-foreground text-xs">
-            <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
+            <Link to="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>
             {" · "}
-            <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
+            <Link to="/terms-of-service" className="hover:text-primary transition-colors">Terms of Service</Link>
           </p>
         </div>
       </div>
