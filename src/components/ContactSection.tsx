@@ -1,15 +1,6 @@
-import { useState } from "react";
 import { MapPin, Phone, Mail } from "lucide-react";
 
 const ContactSection = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-
   return (
     <section id="contact" className="section-padding bg-background">
       <div className="container-max">
@@ -68,65 +59,26 @@ const ContactSection = () => {
             </div>
           </div>
 
-          {/* Form */}
-          <div>
-            {submitted ? (
-              <div className="bg-card rounded-lg border border-border p-12 text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Mail className="text-primary" size={28} />
-                </div>
-                <h3 className="font-heading font-bold text-xl text-foreground mb-2">Message Sent!</h3>
-                <p className="text-muted-foreground font-body">Thank you for reaching out. We'll get back to you within 24 hours.</p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="bg-card rounded-lg border border-border p-8 shadow-md space-y-5">
-                <div>
-                  <label className="block font-heading font-semibold text-sm text-foreground mb-1.5">Name</label>
-                  <input
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-                  />
-                </div>
-                <div>
-                  <label className="block font-heading font-semibold text-sm text-foreground mb-1.5">Email</label>
-                  <input
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-                  />
-                </div>
-                <div>
-                  <label className="block font-heading font-semibold text-sm text-foreground mb-1.5">Phone</label>
-                  <input
-                    type="tel"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-                  />
-                </div>
-                <div>
-                  <label className="block font-heading font-semibold text-sm text-foreground mb-1.5">Message</label>
-                  <textarea
-                    required
-                    rows={4}
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-none"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-primary text-primary-foreground font-heading font-bold py-3.5 rounded-md hover:brightness-110 transition-all active:scale-[0.98]"
-                >
-                  Send Message
-                </button>
-              </form>
-            )}
+          {/* Embedded Form */}
+          <div className="bg-card rounded-lg shadow-2xl overflow-hidden">
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/form/dFdc5zQHeJQU0mNyUeTO"
+              style={{ width: "100%", height: "765px", border: "none", borderRadius: "3px" }}
+              id="contact-inline-dFdc5zQHeJQU0mNyUeTO"
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="lovable embed"
+              data-height="765"
+              data-layout-iframe-id="contact-inline-dFdc5zQHeJQU0mNyUeTO"
+              data-form-id="dFdc5zQHeJQU0mNyUeTO"
+              title="lovable embed"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
