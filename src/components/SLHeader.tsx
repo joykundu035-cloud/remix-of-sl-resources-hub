@@ -6,7 +6,7 @@ const navLinks = [
   { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
   { label: "Team", href: "#team" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "#home" },
 ];
 
 const SLHeader = () => {

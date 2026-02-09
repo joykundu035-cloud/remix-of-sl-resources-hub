@@ -9,7 +9,7 @@ const ContactSection = () => {
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 reveal">
+        <div className="max-w-2xl mx-auto reveal">
           {/* Info */}
           <div>
             <div className="space-y-6 mb-8">
@@ -50,26 +50,6 @@ const ContactSection = () => {
             </div>
           </div>
 
-          {/* Embedded Form */}
-          <div className="bg-card rounded-lg shadow-2xl overflow-hidden min-h-[744px]">
-            <iframe
-              src="https://api.leadconnectorhq.com/widget/form/dFdc5zQHeJQU0mNyUeTO"
-              style={{ display: "none", width: "100%", height: "100%", border: "none", borderRadius: "3px" }}
-              id="inline-dFdc5zQHeJQU0mNyUeTO"
-              data-layout="{'id':'INLINE'}"
-              data-trigger-type="showOnScrolling"
-              data-trigger-value="50"
-              data-activation-type="alwaysActivated"
-              data-activation-value=""
-              data-deactivation-type="neverDeactivate"
-              data-deactivation-value=""
-              data-form-name="lovable embed"
-              data-height="744"
-              data-layout-iframe-id="inline-dFdc5zQHeJQU0mNyUeTO"
-              data-form-id="dFdc5zQHeJQU0mNyUeTO"
-              title="lovable embed"
-            />
-          </div>
         </div>
       </div>
     </section>;
