@@ -44,6 +44,14 @@ const HeroLeadForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="bg-card rounded-lg shadow-2xl p-6 sm:p-8 max-w-[420px] space-y-5">
+      {/* Logo */}
+      <div className="text-center pb-2">
+        <span className="text-2xl font-heading font-extrabold tracking-tight">
+          <span className="text-primary">SL</span>{" "}
+          <span className="text-foreground">Resources</span>
+        </span>
+      </div>
+
       {/* First Name */}
       <div>
         <label className="block text-sm font-bold text-foreground mb-1">
