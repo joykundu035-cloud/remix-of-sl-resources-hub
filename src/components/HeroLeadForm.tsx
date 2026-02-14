@@ -13,7 +13,6 @@ const HeroLeadForm = () => {
     phone: "",
     email: "",
     consentNonMarketing: false,
-    consentMarketing: false,
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitting, setSubmitting] = useState(false);
@@ -37,7 +36,7 @@ const HeroLeadForm = () => {
     // Simulate submission
     setTimeout(() => {
       toast({ title: "Form submitted!", description: "We'll be in touch soon." });
-      setForm({ firstName: "", lastName: "", phone: "", email: "", consentNonMarketing: false, consentMarketing: false });
+      setForm({ firstName: "", lastName: "", phone: "", email: "", consentNonMarketing: false });
       setSubmitting(false);
     }, 600);
   };
@@ -117,17 +116,6 @@ const HeroLeadForm = () => {
           </span>
         </label>
 
-        <label className="flex items-start gap-3 cursor-pointer">
-          <Checkbox
-            checked={form.consentMarketing}
-            onCheckedChange={(v) => setForm({ ...form, consentMarketing: !!v })}
-            className="mt-1"
-          />
-          <span className="text-xs text-muted-foreground leading-relaxed">
-            By checking this box, I consent to receive marketing and promotional messages including special offers, discounts, new product updates among others from{" "}
-            <strong className="text-foreground">SL Resources</strong> at the phone number provided. Frequency may vary. Message &amp; data rates may apply. Text HELP for assistance, reply STOP to opt out.
-          </span>
-        </label>
       </div>
 
       <Button type="submit" className="w-full h-12 text-base font-bold" disabled={submitting}>
