@@ -13,7 +13,7 @@ const HeroLeadForm = () => {
     phone: "",
     email: "",
     consentCustomerCare: false,
-    consentMarketing: false,
+    consentMarketing: false
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitting, setSubmitting] = useState(false);
@@ -22,8 +22,8 @@ const HeroLeadForm = () => {
     const errs: Record<string, string> = {};
     if (!form.firstName.trim()) errs.firstName = "First name is required";
     if (!form.lastName.trim()) errs.lastName = "Last name is required";
-    if (!form.email.trim()) errs.email = "Email is required";
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) errs.email = "Invalid email";
+    if (!form.email.trim()) errs.email = "Email is required";else
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) errs.email = "Invalid email";
     return errs;
   };
 
@@ -38,7 +38,7 @@ const HeroLeadForm = () => {
     console.info("Form submission consent record:", {
       submittedAt,
       consentCustomerCare: form.consentCustomerCare,
-      consentMarketing: form.consentMarketing,
+      consentMarketing: form.consentMarketing
     });
 
     setTimeout(() => {
@@ -49,7 +49,7 @@ const HeroLeadForm = () => {
         phone: "",
         email: "",
         consentCustomerCare: false,
-        consentMarketing: false,
+        consentMarketing: false
       });
       setSubmitting(false);
     }, 600);
@@ -73,8 +73,8 @@ const HeroLeadForm = () => {
         <Input
           placeholder="First Name"
           value={form.firstName}
-          onChange={(e) => setForm({ ...form, firstName: e.target.value })}
-        />
+          onChange={(e) => setForm({ ...form, firstName: e.target.value })} />
+
         {errors.firstName && <p className="text-xs text-destructive mt-1">{errors.firstName}</p>}
       </div>
 
@@ -86,8 +86,8 @@ const HeroLeadForm = () => {
         <Input
           placeholder="Last Name"
           value={form.lastName}
-          onChange={(e) => setForm({ ...form, lastName: e.target.value })}
-        />
+          onChange={(e) => setForm({ ...form, lastName: e.target.value })} />
+
         {errors.lastName && <p className="text-xs text-destructive mt-1">{errors.lastName}</p>}
       </div>
 
@@ -97,8 +97,8 @@ const HeroLeadForm = () => {
         <Input
           placeholder="Phone"
           value={form.phone}
-          onChange={(e) => setForm({ ...form, phone: e.target.value })}
-        />
+          onChange={(e) => setForm({ ...form, phone: e.target.value })} />
+
       </div>
 
       {/* Email */}
@@ -110,8 +110,8 @@ const HeroLeadForm = () => {
           type="email"
           placeholder="Email"
           value={form.email}
-          onChange={(e) => setForm({ ...form, email: e.target.value })}
-        />
+          onChange={(e) => setForm({ ...form, email: e.target.value })} />
+
         {errors.email && <p className="text-xs text-destructive mt-1">{errors.email}</p>}
       </div>
 
@@ -122,8 +122,8 @@ const HeroLeadForm = () => {
           <Checkbox
             checked={form.consentCustomerCare}
             onCheckedChange={(v) => setForm({ ...form, consentCustomerCare: !!v })}
-            className="mt-1 shrink-0"
-          />
+            className="mt-1 shrink-0" />
+
           <span className="text-xs text-muted-foreground leading-relaxed">
             I consent to receive non-marketing text messages from{" "}
             <strong className="text-foreground">SL Resources</strong> related to my inquiry,
@@ -141,8 +141,8 @@ const HeroLeadForm = () => {
           <Checkbox
             checked={form.consentMarketing}
             onCheckedChange={(v) => setForm({ ...form, consentMarketing: !!v })}
-            className="mt-1 shrink-0"
-          />
+            className="mt-1 shrink-0" />
+
           <span className="text-xs text-muted-foreground leading-relaxed">
             I consent to receive marketing text messages from{" "}
             <strong className="text-foreground">SL Resources</strong>, including updates and service
@@ -167,8 +167,8 @@ const HeroLeadForm = () => {
           support@slresources.info
         </a>{" "}
         or call{" "}
-        <a href="tel:+14024005555" className="text-primary hover:underline">
-          (402) 400-5555
+        <a href="tel:+14024005555" className="text-primary hover:underline">(402) 310-4362
+
         </a>
         .
       </p>
@@ -183,8 +183,8 @@ const HeroLeadForm = () => {
           Terms of Service
         </Link>
       </p>
-    </form>
-  );
+    </form>);
+
 };
 
 export default HeroLeadForm;
