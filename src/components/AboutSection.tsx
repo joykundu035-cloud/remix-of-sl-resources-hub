@@ -24,8 +24,11 @@ const AboutSection = () => {
             <p className="text-muted-foreground font-body leading-relaxed mb-4">
               SL Resources is a specialized service provider dedicated to helping trucking companies and carriers find qualified drivers through innovative lead generation, professional web design, and strategic social media optimization.
             </p>
-            <p className="text-muted-foreground font-body leading-relaxed mb-6">
+            <p className="text-muted-foreground font-body leading-relaxed mb-4">
               With years of industry experience, we understand the unique challenges of the trucking sector. Our team works tirelessly to deliver measurable results that drive growth for your business.
+            </p>
+            <p className="text-muted-foreground font-body leading-relaxed mb-6">
+              SL Resources provides services directly to customers who submit inquiries through our website. We communicate directly with customers regarding their requests, services, and support. SL Resources does not sell or distribute customer information to third parties.
             </p>
             <div className="grid sm:grid-cols-2 gap-3">
               {highlights.map((h) => (
