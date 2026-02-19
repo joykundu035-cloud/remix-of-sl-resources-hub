@@ -78,16 +78,19 @@ const TermsOfService = () => {
             <section>
               <h2 className="font-heading text-xl font-semibold text-foreground mb-3">9. SMS Terms</h2>
               <p className="mb-3">
-                By opting in to receive SMS messages from SL Resources, you agree to receive messages related to your inquiry, requested services, customer support, and optional marketing messages if separately consented.
+                By opting in to receive SMS messages from SL Resources, you consent to receive messages related to your inquiry, requested services, customer support, and optional marketing messages if separately consented.
               </p>
               <p className="mb-3">
-                Message frequency may vary. Message and data rates may apply.
+                You may receive up to 2 messages per inquiry. Message and data rates may apply.
               </p>
               <p className="mb-3">
                 You may opt out at any time by replying STOP. Reply HELP for assistance.
               </p>
-              <p>
+              <p className="mb-3">
                 Consent to receive SMS messages is not a condition of purchase.
+              </p>
+              <p>
+                SL Resources does not sell, rent, or share your phone number or SMS consent with third parties.
               </p>
             </section>
 
