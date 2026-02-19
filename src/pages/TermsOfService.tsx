@@ -26,6 +26,7 @@ const TermsOfService = () => {
           <h1 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-8">Terms of Service</h1>
 
           <div className="space-y-8 text-muted-foreground font-body leading-relaxed text-sm sm:text-base">
+
             <section>
               <h2 className="font-heading text-xl font-semibold text-foreground mb-3">1. Terms</h2>
               <p>By accessing this web site, you are agreeing to be bound by these web site Terms and Conditions of Use, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this web site are protected by applicable copyright and trade mark law.</p>
@@ -73,6 +74,23 @@ const TermsOfService = () => {
               <h2 className="font-heading text-xl font-semibold text-foreground mb-3">8. Governing Law</h2>
               <p>Any claim relating to SLResources1.com web site shall be governed by the laws of the State of Nebraska without regard to its conflict of law provisions. General Terms and Conditions applicable to Use of a Web Site.</p>
             </section>
+
+            <section>
+              <h2 className="font-heading text-xl font-semibold text-foreground mb-3">9. SMS Terms</h2>
+              <p className="mb-3">
+                By opting in to receive SMS messages from SL Resources, you agree to receive messages related to your inquiry, requested services, customer support, and optional marketing messages if separately consented.
+              </p>
+              <p className="mb-3">
+                Message frequency may vary. Message and data rates may apply.
+              </p>
+              <p className="mb-3">
+                You may opt out at any time by replying STOP. Reply HELP for assistance.
+              </p>
+              <p>
+                Consent to receive SMS messages is not a condition of purchase.
+              </p>
+            </section>
+
           </div>
 
           <p className="mt-12 text-xs text-muted-foreground">Last updated: January 1, 2025</p>

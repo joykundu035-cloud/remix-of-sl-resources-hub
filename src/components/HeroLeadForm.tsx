@@ -12,7 +12,8 @@ const HeroLeadForm = () => {
     lastName: "",
     phone: "",
     email: "",
-    consentNonMarketing: false,
+    consentCustomerCare: false,
+    consentMarketing: false,
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitting, setSubmitting] = useState(false);
@@ -33,10 +34,23 @@ const HeroLeadForm = () => {
     if (Object.keys(errs).length > 0) return;
 
     setSubmitting(true);
-    // Simulate submission
+    const submittedAt = new Date().toISOString();
+    console.info("Form submission consent record:", {
+      submittedAt,
+      consentCustomerCare: form.consentCustomerCare,
+      consentMarketing: form.consentMarketing,
+    });
+
     setTimeout(() => {
       toast({ title: "Form submitted!", description: "We'll be in touch soon." });
-      setForm({ firstName: "", lastName: "", phone: "", email: "", consentNonMarketing: false });
+      setForm({
+        firstName: "",
+        lastName: "",
+        phone: "",
+        email: "",
+        consentCustomerCare: false,
+        consentMarketing: false,
+      });
       setSubmitting(false);
     }, 600);
   };
@@ -101,31 +115,73 @@ const HeroLeadForm = () => {
         {errors.email && <p className="text-xs text-destructive mt-1">{errors.email}</p>}
       </div>
 
-      {/* Consent checkboxes */}
+      {/* SMS Consent Checkboxes */}
       <div className="space-y-4 pt-2">
+        {/* Checkbox 1 — Customer Care SMS */}
         <label className="flex items-start gap-3 cursor-pointer">
           <Checkbox
-            checked={form.consentNonMarketing}
-            onCheckedChange={(v) => setForm({ ...form, consentNonMarketing: !!v })}
-            className="mt-1"
+            checked={form.consentCustomerCare}
+            onCheckedChange={(v) => setForm({ ...form, consentCustomerCare: !!v })}
+            className="mt-1 shrink-0"
           />
           <span className="text-xs text-muted-foreground leading-relaxed">
-            By checking this box, I consent to receive non-marketing text messages from{" "}
-            <strong className="text-foreground">SL Resources</strong> related to{" "}
-            <strong className="text-foreground">my inquiry or requested services</strong>. Message frequency varies, message &amp; data rates may apply. Text HELP for assistance, reply STOP to opt out.
+            I consent to receive non-marketing text messages from{" "}
+            <strong className="text-foreground">SL Resources</strong> related to my inquiry,
+            requested services, or customer support. Message frequency may vary. Message and data
+            rates may apply. Reply STOP to opt out or HELP for assistance. For support, contact{" "}
+            <a href="mailto:support@slresources.info" className="text-primary hover:underline">
+              support@slresources.info
+            </a>
+            .
           </span>
         </label>
 
+        {/* Checkbox 2 — Marketing SMS (Optional) */}
+        <label className="flex items-start gap-3 cursor-pointer">
+          <Checkbox
+            checked={form.consentMarketing}
+            onCheckedChange={(v) => setForm({ ...form, consentMarketing: !!v })}
+            className="mt-1 shrink-0"
+          />
+          <span className="text-xs text-muted-foreground leading-relaxed">
+            I consent to receive marketing text messages from{" "}
+            <strong className="text-foreground">SL Resources</strong>, including updates and service
+            information. Message frequency may vary. Message and data rates may apply. Reply STOP to
+            opt out or HELP for assistance. For support, contact{" "}
+            <a href="mailto:support@slresources.info" className="text-primary hover:underline">
+              support@slresources.info
+            </a>
+            .
+          </span>
+        </label>
       </div>
 
       <Button type="submit" className="w-full h-12 text-base font-bold" disabled={submitting}>
         {submitting ? "Submitting..." : "Submit"}
       </Button>
 
+      {/* Support contact */}
       <p className="text-center text-xs text-muted-foreground">
-        <Link to="/privacy-policy" className="text-primary hover:underline">Privacy Policy</Link>
+        For support, contact{" "}
+        <a href="mailto:support@slresources.info" className="text-primary hover:underline">
+          support@slresources.info
+        </a>{" "}
+        or call{" "}
+        <a href="tel:+14024005555" className="text-primary hover:underline">
+          (402) 400-5555
+        </a>
+        .
+      </p>
+
+      {/* Legal links */}
+      <p className="text-center text-xs text-muted-foreground">
+        <Link to="/privacy-policy" className="text-primary hover:underline">
+          Privacy Policy
+        </Link>
         {" | "}
-        <Link to="/terms-of-service" className="text-primary hover:underline">Terms of Service</Link>
+        <Link to="/terms-of-service" className="text-primary hover:underline">
+          Terms of Service
+        </Link>
       </p>
     </form>
   );
